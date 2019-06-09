@@ -13,7 +13,7 @@ for (let i = 0; i < $folders.length; i++) {
             file_container.classList.add("draggable");
             $container.appendChild(file_container);
             const files_explorer = new Image();
-            files_explorer.src = "http://localhost:8888/Portfolio/public/src/images/files_explorer.png";
+            files_explorer.src = "http://leo-sablong.com/public/src/images/files_explorer.png";
             files_explorer.classList.add("explorer");
             file_container.appendChild(files_explorer);
             const project_name = document.createElement("span")
@@ -21,7 +21,7 @@ for (let i = 0; i < $folders.length; i++) {
             project_name.innerText = e.dataset.name
             file_container.appendChild(project_name);
             const button = new Image();
-            button.src = "http://localhost:8888/Portfolio/public/src/images/window_buttons_1.png";
+            button.src = "http://leo-sablong.com/public/src/images/window_buttons_1.png";
             button.classList.add("button");
             file_container.appendChild(button);
             button.addEventListener('click', () => {$container.removeChild(file_container)})
@@ -36,7 +36,7 @@ for (let i = 0; i < $folders.length; i++) {
             image_container.classList.add("draggable_inside");
             folders_container.appendChild(image_container);
             const image_icon = new Image();
-            image_icon.src = "http://localhost:8888/Portfolio/public/src/images/image_icon.jpg";
+            image_icon.src = "http://leo-sablong.com/public/src/images/image_icon.jpg";
             image_icon.classList.add("image_icon");
             image_container.appendChild(image_icon);
             image_container.addEventListener('dblclick', () => {
@@ -47,7 +47,7 @@ for (let i = 0; i < $folders.length; i++) {
             view_container.classList.add("draggable");
             $container.appendChild(view_container);
             const view_template = new Image();
-            view_template.src = "http://localhost:8888/Portfolio/public/src/images/photo_view_empty.png";
+            view_template.src = "http://leo-sablong.com/public/src/images/photo_view_empty.png";
             view_template.classList.add("view_template");
             view_container.appendChild(view_template);
             const project_name = document.createElement("span")
@@ -55,12 +55,12 @@ for (let i = 0; i < $folders.length; i++) {
             project_name.innerText = e.dataset.name + " images"
             view_container.appendChild(project_name);
             const button = new Image();
-            button.src = "http://localhost:8888/Portfolio/public/src/images/window_buttons_1.png";
+            button.src = "http://leo-sablong.com/public/src/images/window_buttons_1.png";
             button.classList.add("button_photo");
             view_container.appendChild(button);
             button.addEventListener('click', () => {$container.removeChild(view_container)})
             const slide = new Image();
-            slide.src = "http://localhost:8888/Portfolio/public/src/images/slider_images/"+e.dataset.screen+"/1.png";
+            slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/1.png";
             slide.classList.add("slide");
             view_container.appendChild(slide);
             const button_next = document.createElement("div")
@@ -68,19 +68,19 @@ for (let i = 0; i < $folders.length; i++) {
             view_container.appendChild(button_next); 
             button_next.addEventListener('click',() => {
                 if (number_slide == 1) {
-                    slide.src = "http://localhost:8888/Portfolio/public/src/images/slider_images/"+e.dataset.screen+"/2.png";
+                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/2.png";
                     number_slide = 2
                 }
                 else if (number_slide == 2) {
-                    slide.src = "http://localhost:8888/Portfolio/public/src/images/slider_images/"+e.dataset.screen+"/3.png";
+                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/3.png";
                     number_slide = 3
                 }
                 else if (number_slide == 3) {
-                    slide.src = "http://localhost:8888/Portfolio/public/src/images/slider_images/"+e.dataset.screen+"/4.png";
+                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/4.png";
                     number_slide = 4
                 }
                 else if (number_slide == 4) {
-                    slide.src = "http://localhost:8888/Portfolio/public/src/images/slider_images/"+e.dataset.screen+"/1.png";
+                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/1.png";
                     number_slide = 1
                 }
             })
@@ -89,19 +89,19 @@ for (let i = 0; i < $folders.length; i++) {
             view_container.appendChild(button_back);
             button_back.addEventListener('click',() => {
                 if (number_slide == 1) {
-                    slide.src = "http://localhost:8888/Portfolio/public/src/images/slider_images/"+e.dataset.screen+"/4.png";
+                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/4.png";
                     number_slide = 4
                 }
                 else if (number_slide == 2) {
-                    slide.src = "http://localhost:8888/Portfolio/public/src/images/slider_images/"+e.dataset.screen+"/1.png";
+                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/1.png";
                     number_slide = 1
                 }
                 else if (number_slide == 3) {
-                    slide.src = "http://localhost:8888/Portfolio/public/src/images/slider_images/"+e.dataset.screen+"/2.png";
+                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/2.png";
                     number_slide = 2
                 }
                 else if (number_slide == 4) {
-                    slide.src = "http://localhost:8888/Portfolio/public/src/images/slider_images/"+e.dataset.screen+"/3.png";
+                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/3.png";
                     number_slide = 3
                 }
             })  
@@ -115,7 +115,7 @@ for (let i = 0; i < $folders.length; i++) {
             txt_container.classList.add("draggable_inside");
             folders_container.appendChild(txt_container);
             const txt_icon = new Image();
-            txt_icon.src = "http://localhost:8888/Portfolio/public/src/images/txt_icon2.png";
+            txt_icon.src = "http://leo-sablong.com/public/src/images/txt_icon2.png";
             txt_icon.classList.add("image_icon");
             txt_container.appendChild(txt_icon);
             const image = document.createElement("span")
@@ -131,11 +131,11 @@ for (let i = 0; i < $folders.length; i++) {
                 text_container.classList.add("draggable_inside");
                 $container.appendChild(text_container);
                 const text_template = new Image();
-                text_template.src = "http://localhost:8888/Portfolio/public/src/images/bloc_note.png";
+                text_template.src = "http://leo-sablong.com/public/src/images/bloc_note.png";
                 text_template.classList.add("text_template");
                 text_container.appendChild(text_template);
                 const button = new Image();
-                button.src = "http://localhost:8888/Portfolio/public/src/images/window_buttons_1.png";
+                button.src = "http://leo-sablong.com/public/src/images/window_buttons_1.png";
                 button.classList.add("button_text");
                 text_container.appendChild(button);
                 const project_description = document.createElement("span")
@@ -157,7 +157,7 @@ for (let i = 0; i < $folders.length; i++) {
             discover_container.classList.add("draggable_inside");
             folders_container.appendChild(discover_container);
             const discover_icon = new Image();
-            discover_icon.src = "http://localhost:8888/Portfolio/public/src/images/exe_icon.png";
+            discover_icon.src = "http://leo-sablong.com/public/src/images/exe_icon.png";
             discover_icon.classList.add("image_icon");
             discover_container.appendChild(discover_icon);
             const dicover_txt = document.createElement("span")

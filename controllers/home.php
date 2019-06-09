@@ -1,6 +1,6 @@
 <?php
 
-$title = 'My Website';
+$title = 'Porfolio';
 
 
 /**

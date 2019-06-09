@@ -6,7 +6,7 @@
  * Routing
  */
 
-define ('URL','http://localhost:8888/Portfolio/public/');
+define ('URL','http://leo-sablong.com/public/');
 
  //Get q param
  $q = !empty($_GET['q']) ? $_GET['q'] : 'home';
