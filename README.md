@@ -1,8 +1,8 @@
-# voici mon profolio
+# Voici mon profolio
 
 Inspiré par le meilleur systeme d'expoitation du monde "Window xp"
 
-##feature
+#Feature
 
 * les projet son sous form de dossier que l'on peut drag and drop en double clicant sur un dossier cela l'ouvre
 * tout les projet presente des images un un bloc note qui contient la descrption du pojet et un discover.exe pour nous rediriger vers les dit porjet (cela ne parche pas encore car je n'ai pas mise les pojet sur le ftp mais la redirection elle fonctionne)

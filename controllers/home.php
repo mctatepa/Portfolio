@@ -35,4 +35,4 @@ $title = 'Porfolio';
 // $returnedData = $query->fetchAll();
 
 
-include '../views/pages/home.php';
+include 'views/pages/home.php';

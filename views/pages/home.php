@@ -1,4 +1,4 @@
-<?php include '../views/partials/header.php' ?>
+<?php include 'views/partials/header.php' ?>
 
 <div class="windows_xp">
     <div class="all_folders">
@@ -31,4 +31,4 @@
 </div>
 
 
-<?php include '../views/partials/footer.php' ?>
+<?php include 'views/partials/footer.php' ?>

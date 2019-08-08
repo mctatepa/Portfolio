@@ -1,4 +1,4 @@
-<?php include '../views/partials/header.php' ?>
+<?php include 'views/partials/header.php' ?>
 
 <h1>Page <?= $id ?></h1>
 
@@ -43,5 +43,5 @@ if ($id == 1){?>
 }
 
 
-include '../views/partials/footer.php' 
+include 'views/partials/footer.php' 
 ?>

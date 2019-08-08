@@ -1,6 +1,6 @@
 <?php
 
-// include '../database/database.php';
+// include 'database/database.php';
 
 /**
  * Routing
@@ -36,4 +36,4 @@ define ('URL','http://leo-sablong.com/public/');
 
 
  //include controller
- include '../controllers/'.$controller.'.php';
+ include 'controllers/'.$controller.'.php';

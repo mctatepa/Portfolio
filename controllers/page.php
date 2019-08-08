@@ -73,4 +73,4 @@ if(!empty($result) && $result->cod === 200)
 
 
 
-include '../views/pages/page.php'; ?>
+include 'views/pages/page.php'; ?>
