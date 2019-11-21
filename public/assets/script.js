@@ -27,7 +27,7 @@ for (let i = 0; i < $folders.length; i++) {
             //Event
             dataLayer.push({
                 'event': 'folder_click',
-                'folder_name':`${e.dataset.name}`
+                'folder_name':`${e.dataset.screen}`
         });
             // files explorer
             const file_container = document.createElement("div")
@@ -196,7 +196,7 @@ for (let i = 0; i < $folders.length; i++) {
             dicover_txt.innerText = "discover.exe"
             discover_container.appendChild(dicover_txt);
             discover_container.addEventListener('dblclick', () => {
-                document.location.href="http://www.google.com"
+                document.location.href=`${baseURL}Projet/${e.dataset.url}`
             })
         }
     )

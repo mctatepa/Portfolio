@@ -10,7 +10,7 @@
             <img class="img_folder" src="<?= URL ?>src/images/folder.png" alt="">
             <span class="folder_name">projet 1</span>
         </div>
-        <div class="folders draggable folder_3" data-name="projet 2" data-description="Projet faisant la compliation de plusieur api de cinema pour donner des note plus complete"data-screen="movin">
+        <div class="folders draggable folder_3" data-name="projet 2" data-description="Projet faisant la compliation de plusieur api de cinema pour donner des note plus complete"data-screen="movin" data-url="Back_SI_enligne">
             <img class="img_folder" src="<?= URL ?>src/images/folder.png" alt="">
             <span class="folder_name">projet 2</span>
         </div>
