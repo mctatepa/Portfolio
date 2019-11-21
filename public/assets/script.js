@@ -1,19 +1,41 @@
 let $container = document.querySelector('.windows_xp')
 let $folders = $container.querySelectorAll('.folders')
 let $bin = $container.querySelectorAll('.bin')
+let baseURL = window.location.href
+
+
+class folder {
+    constructor(container, file_class, name, description, screen){
+        this.container = container
+        this.file_class= file_class
+        this.name = name
+        this.description = description
+        this.screen = screen
+        this.init()
+    }
+    init(){
+
+    }
+}
+let tata = new folder('oui','non', "projet 1", "projet sur les bebe phoque","bebe")
 
 
 for (let i = 0; i < $folders.length; i++) {
     const e = $folders[i];
     e.addEventListener(
         'dblclick', () => {
+            //Event
+            dataLayer.push({
+                'event': 'folder_click',
+                'folder_name':`${e.dataset.name}`
+        });
             // files explorer
             const file_container = document.createElement("div")
             file_container.classList.add("file_container");
             file_container.classList.add("draggable");
             $container.appendChild(file_container);
             const files_explorer = new Image();
-            files_explorer.src = "http://leo-sablong.com/public/src/images/files_explorer.png";
+            files_explorer.src = `${baseURL}/public/src/images/files_explorer.png`;
             files_explorer.classList.add("explorer");
             file_container.appendChild(files_explorer);
             const project_name = document.createElement("span")
@@ -21,7 +43,7 @@ for (let i = 0; i < $folders.length; i++) {
             project_name.innerText = e.dataset.name
             file_container.appendChild(project_name);
             const button = new Image();
-            button.src = "http://leo-sablong.com/public/src/images/window_buttons_1.png";
+            button.src = `${baseURL}/public/src/images/window_buttons_1.png`;
             button.classList.add("button");
             file_container.appendChild(button);
             button.addEventListener('click', () => {$container.removeChild(file_container)})
@@ -36,18 +58,20 @@ for (let i = 0; i < $folders.length; i++) {
             image_container.classList.add("draggable_inside");
             folders_container.appendChild(image_container);
             const image_icon = new Image();
-            image_icon.src = "http://leo-sablong.com/public/src/images/image_icon.jpg";
+            image_icon.src = `${baseURL}/public/src/images/image_icon.jpg`;
             image_icon.classList.add("image_icon");
             image_container.appendChild(image_icon);
             image_container.addEventListener('dblclick', () => {
-
+            dataLayer.push({
+                'event': 'images_viewer_click',
+            });
             let number_slide = 1
             const view_container = document.createElement("div")
             view_container.classList.add("view_container");
             view_container.classList.add("draggable");
             $container.appendChild(view_container);
             const view_template = new Image();
-            view_template.src = "http://leo-sablong.com/public/src/images/photo_view_empty.png";
+            view_template.src = `${baseURL}/public/src/images/photo_view_empty.png`;
             view_template.classList.add("view_template");
             view_container.appendChild(view_template);
             const project_name = document.createElement("span")
@@ -55,32 +79,35 @@ for (let i = 0; i < $folders.length; i++) {
             project_name.innerText = e.dataset.name + " images"
             view_container.appendChild(project_name);
             const button = new Image();
-            button.src = "http://leo-sablong.com/public/src/images/window_buttons_1.png";
+            button.src = `${baseURL}/public/src/images/window_buttons_1.png`;
             button.classList.add("button_photo");
             view_container.appendChild(button);
             button.addEventListener('click', () => {$container.removeChild(view_container)})
             const slide = new Image();
-            slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/1.png";
+            slide.src = `${baseURL}/public/src/images/slider_images/${e.dataset.screen}/1.jpg`;
             slide.classList.add("slide");
             view_container.appendChild(slide);
             const button_next = document.createElement("div")
             button_next.classList.add("button_next");
             view_container.appendChild(button_next); 
             button_next.addEventListener('click',() => {
+                dataLayer.push({
+                    'event': 'button_next',
+                });
                 if (number_slide == 1) {
-                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/2.png";
+                    slide.src = `${baseURL}/public/src/images/slider_images/${e.dataset.screen}/2.jpg`;
                     number_slide = 2
                 }
                 else if (number_slide == 2) {
-                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/3.png";
+                    slide.src = `${baseURL}/public/src/images/slider_images/${e.dataset.screen}/3.jpg`;
                     number_slide = 3
                 }
                 else if (number_slide == 3) {
-                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/4.png";
+                    slide.src = `${baseURL}/public/src/images/slider_images/${e.dataset.screen}/4.jpg`;
                     number_slide = 4
                 }
                 else if (number_slide == 4) {
-                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/1.png";
+                    slide.src = `${baseURL}/public/src/images/slider_images/${e.dataset.screen}/1.jpg`;
                     number_slide = 1
                 }
             })
@@ -88,20 +115,23 @@ for (let i = 0; i < $folders.length; i++) {
             button_back.classList.add("button_back");
             view_container.appendChild(button_back);
             button_back.addEventListener('click',() => {
+                dataLayer.push({
+                    'event': 'button_back',
+                });
                 if (number_slide == 1) {
-                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/4.png";
+                    slide.src = `${baseURL}/public/src/images/slider_images/${e.dataset.screen}/4.jpg`;
                     number_slide = 4
                 }
                 else if (number_slide == 2) {
-                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/1.png";
+                    slide.src = `${baseURL}/public/src/images/slider_images/${e.dataset.screen}/1.jpg`;
                     number_slide = 1
                 }
                 else if (number_slide == 3) {
-                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/2.png";
+                    slide.src = `${baseURL}/public/src/images/slider_images/${e.dataset.screen}/2.jpg`;
                     number_slide = 2
                 }
                 else if (number_slide == 4) {
-                    slide.src = "http://leo-sablong.com/public/src/images/slider_images/"+e.dataset.screen+"/3.png";
+                    slide.src = `${baseURL}/public/src/images/slider_images/${e.dataset.screen}/3.jpg`;
                     number_slide = 3
                 }
             })  
@@ -115,27 +145,29 @@ for (let i = 0; i < $folders.length; i++) {
             txt_container.classList.add("draggable_inside");
             folders_container.appendChild(txt_container);
             const txt_icon = new Image();
-            txt_icon.src = "http://leo-sablong.com/public/src/images/txt_icon2.png";
+            txt_icon.src = `${baseURL}/public/src/images/txt_icon2.png`;
             txt_icon.classList.add("image_icon");
             txt_container.appendChild(txt_icon);
             const image = document.createElement("span")
-            image.innerText = "images.png"
+            image.innerText = "images.jpg"
             image_container.appendChild(image);
             const txt = document.createElement("span")
             txt.innerText = "description.txt"
             txt_container.appendChild(txt);
             txt_container.addEventListener('dblclick', () => {
-
+                dataLayer.push({
+                    'event': 'text_viewer',
+                });
                 const text_container = document.createElement("div")
                 text_container.classList.add("text_container");
                 text_container.classList.add("draggable_inside");
                 $container.appendChild(text_container);
                 const text_template = new Image();
-                text_template.src = "http://leo-sablong.com/public/src/images/bloc_note.png";
+                text_template.src = `${baseURL}/public/src/images/bloc_note.png`;
                 text_template.classList.add("text_template");
                 text_container.appendChild(text_template);
                 const button = new Image();
-                button.src = "http://leo-sablong.com/public/src/images/window_buttons_1.png";
+                button.src = `${baseURL}/public/src/images/window_buttons_1.png`;
                 button.classList.add("button_text");
                 text_container.appendChild(button);
                 const project_description = document.createElement("span")
@@ -157,7 +189,7 @@ for (let i = 0; i < $folders.length; i++) {
             discover_container.classList.add("draggable_inside");
             folders_container.appendChild(discover_container);
             const discover_icon = new Image();
-            discover_icon.src = "http://leo-sablong.com/public/src/images/exe_icon.png";
+            discover_icon.src = `${baseURL}/public/src/images/exe_icon.png`;
             discover_icon.classList.add("image_icon");
             discover_container.appendChild(discover_icon);
             const dicover_txt = document.createElement("span")
